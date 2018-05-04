@@ -1,7 +1,10 @@
 require_relative '../config'
+require 'savon'
+#require 'spec_helper'
 
 class GetWaterLevel
 	attr_accessor :station_id
+	attr_reader :client	
 
 	def initialize(station_id=8454000)
 		self.station_id = station_id
@@ -11,7 +14,7 @@ class GetWaterLevel
 		client = Savon.client do
 		
 			# The WSDL document provided by the NOAA.
-			wsdl "https://opendap.co-ops.nos.noaa.gov/axis/webservices/waterlevelrawsixmin/wsdl"
+			:wsdl => "https://opendap.co-ops.nos.noaa.gov/axis/webservices/waterlevelrawsixmin/wsdl"
 
 			# Needed because (up until now), Savon doesn't match XS types to Hash keys,
 			# but defaults to convert Hash message Symbols (like :from_unit) to lowerCamelCase.
@@ -20,13 +23,21 @@ class GetWaterLevel
 			# convert_request_keys_to :camelcase - not necessary as the service uses lowerCamelCase - CPD 04-May-2018
 
 			# Lower timeouts so these specs don't take forever when the service is not available.
-			open_timeout 30
-			read_timeout 30
+			:open_timeout => 30
+			:read_timeout => 30
 
 			# Disable logging for cleaner spec output.
-			log false
+			:log => false
 		end	
-		client
+		@client = client
+		self.client
 	end
-
+	
+	def pull_response
+		#message = {:stationId => self.station_id.to_s, :beginDate => "20180501 00:00", :endDate => "20180504 00:00", \
+		#	:datum => "MLLW", :unit => 0, :timeZone => 0}
+		
+		#response = self.client.call(:WaterLevelRawSixMinMeasurements, :message message)
+		#response
+	end
 end

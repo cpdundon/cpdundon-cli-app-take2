@@ -10,7 +10,6 @@ Gem::Specification.new do |spec|
   spec.email         = ["chris.dundon@gmail.com"]
 
   spec.summary       = %q{Scrape wind velocity and water level data from NOAA CO-OPS SOAP web services.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "https://github.com/cpdundon/cpdundon-cli-app-take2"
   spec.license       = "MIT"
 

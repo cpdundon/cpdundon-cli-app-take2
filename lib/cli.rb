@@ -10,7 +10,7 @@ class CLI
 	def main()
 		input = nil
 		puts "'Exit' will stop the program."
-		do until (input = "exit")
+		until (input == "exit") do
 			puts "Are you ready for the most recent wind and tide measurement? (y/n)"
 			input = gets.strip.downcase
 			puts "At HH:MM:SS EST on 03-May-2018, the wind speed is 10 knots and the wind " \

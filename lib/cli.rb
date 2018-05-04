@@ -15,8 +15,10 @@ class CLI
 			input = gets.strip.downcase
 			puts "At HH:MM:SS EST on 03-May-2018, the wind speed is 10 knots and the wind " \
 				"angle is 180 degrees."  if input == "y"
+			puts			
 			puts "At HH:MM:SS EST on 03-May-2018, the tide hight is 4 feet above sea level." \
 				if input == "y"
+			puts
 		end
 	end
 end

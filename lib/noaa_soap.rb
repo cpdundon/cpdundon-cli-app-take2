@@ -2,6 +2,11 @@ require_relative '../config'
 
 class NOAA_SOAP
 	attr_reader :client	
+	
+	def self.most_recent(data)
+		d = data.sort { |x,y| y[:time_stamp] <=> x[:time_stamp] }[0]
+		d
+	end
 
 	def initialize(wsdl = "https://opendap.co-ops.nos.noaa.gov/axis/webservices/waterlevelrawsixmin/wsdl/WaterLevelRawSixMin.wsdl")
 		create_client(wsdl)

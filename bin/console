@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+require "irb"
 require "bundler/setup"
 require_relative "../config"
 
@@ -10,7 +11,10 @@ require_relative "../config"
 # require "pry"
 # Pry.start
 
-require "irb"
+def reload!
+  load "./config.rb"
+end
+
 IRB.start
 
 

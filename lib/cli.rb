@@ -24,6 +24,7 @@ class CLI
 			puts
 
 			input = gets.strip.downcase
+			puts
 
 			if input == "y"
 				gwl = GetWaterLevel.new
@@ -37,7 +38,7 @@ class CLI
 
 				puts "At #{wv[:time_stamp]} GMT, the wind speed is #{wv[:ws]} m\/s and the wind " \
 					"is from #{wv[:wd]} degrees."
-				
+				puts
 				puts "At #{wl[:time_stamp]} GMT, the tide hight is #{wl[:wl]} meters above/below sea level." \
 				
 			end

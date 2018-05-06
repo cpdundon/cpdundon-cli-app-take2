@@ -22,17 +22,17 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
+  spec.files	= ["lib/gmt.rb", "lib/cli.rb", "lib/get_water_level.rb", "lib/get_wind.rb", "lib/noaa_soap.rb", "config.rb"]
+#  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+#    f.match(%r{^(test|spec|features)/})
   end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = ["lib", "lib/cpdundon/cli/app", "lib/cpdundon/cli/app/take2"]
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
 
   spec.add_dependency "savon", "~>2.0"
-  spec.add_dependency "time", "~>0"
 end

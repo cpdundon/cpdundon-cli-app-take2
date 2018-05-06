@@ -2,7 +2,7 @@ module Cpdundon
   module Cli
     module App
       module Take2
-        VERSION = "0.1.10"
+        VERSION = "0.1.11"
       end
     end
   end

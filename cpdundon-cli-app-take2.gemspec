@@ -22,8 +22,11 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files = Dir['*.rb'] + Dir['lib/   *.rb'] + Dir['bin/*'] 
-  spec.files += Dir['[A-Z]*'] + Dir['lib/cli/app/   *.rb'] + Dir['lib/cli/app/take2/   *.rb']
+  spec.files = ['config.rb', 'lib/gmt.rb', 'lib.noaa_soap.rb', 'lib/get_water_level.rb', 'lib/get_wind.rb', 'lib/cli.rb']
+	spec.files += ['bin/bin', 'bin/setup']
+
+#  spec.files = Dir['*.rb'] + Dir['lib/   *.rb'] + Dir['bin/*'] 
+#  spec.files += Dir['[A-Z]*'] + Dir['lib/cli/app/   *.rb'] + Dir['lib/cli/app/take2/   *.rb']
 #  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
 #    f.match(%r{^(test|spec|features)/})
 #  end

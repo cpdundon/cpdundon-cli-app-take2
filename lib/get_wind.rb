@@ -16,7 +16,7 @@ class GetWind < NOAA_SOAP
 		message = {stationId: station_id.to_s, beginDate: GMT.gmt_less_1h, endDate: GMT.gmt_now, \
 			unit: "Meters", timeZone: 0}
 		
-		response = self.pull_response(:get_wind, message)
+		response = self.pull_response(:get_wind_and_metadata, message)
 		response.to_hash[:wind_measurements][:data][:item] #this returns a hash of the data points.
 	end
 	

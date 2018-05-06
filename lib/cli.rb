@@ -20,6 +20,8 @@ class CLI
 		
 		until (input == "exit") do
 			puts "Enter 'y' to pull wind and tide measurements at the #{self.location} location."
+			puts "Enter 'yd' for more detail."
+			puts
 			puts "The NOAA service updates every 6 minutes."
 			puts
 
@@ -38,9 +40,12 @@ class CLI
 
 				puts "At #{wv[:time_stamp]} GMT, the wind speed is #{wv[:ws]} m\/s and the wind " \
 					"is from #{wv[:wd]} degrees."
+				puts "Winds are gusting to ??? m\/s." if input == 'yd'
+				
+				
 				puts
 				puts "At #{wl[:time_stamp]} GMT, the tide hight is #{wl[:wl]} meters above/below sea level." \
-				
+				puts "Measurement standard deviation is ??? meters." if input == 'yd'
 			end
 			puts
 		end

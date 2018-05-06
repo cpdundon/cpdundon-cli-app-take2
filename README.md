@@ -1,8 +1,6 @@
 # Cpdundon::Cli::App::Take2
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/cpdundon/cli/app/take2`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Hi - welcome to the CLI NOAA SOAP interface!  This app pulls tide and wind information from NOAA for NY Harbor.  Run ./bin/bin and watch the weather roll in/out.  The meat of the code for this app is located in ./lib/ .   I'd like to thank Josh Owens, Ann Heilmann Murphy, and Lorraine Fenenbock for helpful discussions on this project.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Please follow the prompts.  Enter 'y' to pull a data point.  Enter 'Exit' to leave the app.
 
 ## Development
 
@@ -32,7 +30,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/cpdundon-cli-app-take2. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/cpdundon/cpdundon-cli-app-take2. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 

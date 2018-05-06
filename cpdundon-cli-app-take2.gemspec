@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.files	= ["lib/gmt.rb", "lib/cli.rb", "lib/get_water_level.rb", "lib/get_wind.rb", "lib/noaa_soap.rb", "config.rb"]
 #  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
 #    f.match(%r{^(test|spec|features)/})
-  end
+#  end
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib", "lib/cpdundon/cli/app", "lib/cpdundon/cli/app/take2"]

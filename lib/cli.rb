@@ -28,7 +28,7 @@ class CLI
 			input = gets.strip.downcase
 			puts
 
-			if input == "y"
+			if input == "y" || input == "yd"
 				gwl = GetWaterLevel.new
 				gwv = GetWind.new
 
@@ -37,15 +37,16 @@ class CLI
 				
 				wl = NOAA_SOAP.most_recent(wl_data)
 				wv = NOAA_SOAP.most_recent(wv_data)
-
-				puts "At #{wv[:time_stamp]} GMT, the wind speed is #{wv[:ws]} m\/s and the wind " \
-					"is from #{wv[:wd]} degrees."
-				puts "Winds are gusting to ??? m\/s." if input == 'yd'
+				
+				puts "Wind Speed at #{wv[:time_stamp]} GMT:"
+				puts "Wind speed is #{wv[:ws]} m\/s out of #{wv[:wd]} degrees."
+				puts "Gusts to #{wv[:wg]} m\/s are reported." if input == 'yd'
 				
 				
 				puts
-				puts "At #{wl[:time_stamp]} GMT, the tide hight is #{wl[:wl]} meters above/below sea level." \
-				puts "Measurement standard deviation is ??? meters." if input == 'yd'
+				puts "Water level at #{wl[:time_stamp]} GMT:"
+				puts "The water level is #{wl[:wl]} meters above/below sea level."
+				puts "Water level standard deviation is #{wl[:sigma]} meters." if input == 'yd'
 			end
 			puts
 		end

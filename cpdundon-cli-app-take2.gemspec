@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files = ['config.rb', 'lib/gmt.rb', 'lib.noaa_soap.rb', 'lib/get_water_level.rb', 'lib/get_wind.rb', 'lib/cli.rb']
+  spec.files = ['config.rb', 'lib/gmt.rb', 'lib/noaa_soap.rb', 'lib/get_water_level.rb', 'lib/get_wind.rb', 'lib/cli.rb']
 	spec.files += ['bin/bin', 'bin/setup']
 
 #  spec.files = Dir['*.rb'] + Dir['lib/   *.rb'] + Dir['bin/*'] 

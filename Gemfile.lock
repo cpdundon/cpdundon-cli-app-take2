@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cpdundon-cli-app-take2 (0.1.0)
+    cpdundon-cli-app-take2 (0.1.12)
       savon (~> 2.0)
 
 GEM

@@ -1,4 +1,4 @@
-require_relative '../config'
+require_relative './config'
 
 class NOAA_SOAP
 	attr_reader :client	
